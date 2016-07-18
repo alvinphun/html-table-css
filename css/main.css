@@ -1,0 +1,247 @@
+/* ================================= 
+  Base Styles
+==================================== */
+
+body {
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.6;
+}
+
+.top-header {
+	text-align: center;
+	background-color: #47476b;
+	padding: 0.50em;
+	margin-top: 0;
+}
+
+.top-header a {
+	text-decoration: none;
+	color: white;
+	font-size: 0.75em;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.title {
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+	border-bottom: solid 3px black;
+}
+
+h2 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+p {
+	font-size: 0.85em;
+	padding-bottom: 1.3em;
+}
+
+.copyright {
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 7em;
+}
+
+img {
+	width: 40px;
+  	height: 40px;
+  	vertical-align: middle;
+}
+
+/* ================================= 
+  Form Styles
+==================================== */
+
+form {
+	width: 90%;
+	margin: 10px auto;
+	border-top: solid 1.7px black;
+}
+
+h3 {
+	font-size: 1.1em;
+}
+
+legend {
+	margin-bottom: 30px;
+	padding-top: 25px;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+fieldset {
+	border: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+	border: none;
+	height: auto;
+	margin: 0;
+	outline: 0;
+	padding: 15px;
+	width: 90%;
+	background-color: #e8eeef;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset;
+	border-radius: 5px;
+	margin-bottom: 25px;
+	transition: background .2s ease-in-out; 
+}
+
+textarea {
+	margin-bottom: 5px;
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    direction: rtl;
+    font-style: italic;
+	font-size: 0.8em;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    direction: rtl;
+    font-style: italic;
+	font-size: 0.8em;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    direction: rtl;
+    font-style: italic;
+	font-size: 0.8em;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    direction: rtl;
+    font-style: italic;
+	font-size: 0.8em;
+}
+
+
+option {
+  color: black;
+}
+
+input[id="postal_code"] {
+	width: 50%;
+}
+
+select[id="expiration_month"],
+select[id="expiration_year"] {
+	width: 50%;
+}
+
+.contact-info {
+	border-bottom: solid 1.7px black;
+	padding: 0 0 15px 0;
+}
+
+.payment {
+	border-bottom: solid 1.7px black;
+	padding: 0 0 15px 0;
+}
+
+.newsletter {
+	margin-bottom: 0;
+	padding: 0 0 15px 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	margin: 0 4px 8px 5px;
+}
+
+input:focus, textarea:focus {
+  	border: solid 1px black;
+  	background-color: #e6f7ff;
+}
+
+
+label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+label.light {
+	display: inline;
+	font-weight: 300;
+}
+
+.format_legend {
+	margin-top: 1.8em;
+}
+
+.topics_label {
+	margin-top: 1.5em;
+}
+
+button {
+	padding: 1em;
+	color: #fff;
+	background-color: #2eb8b8;
+	text-align: center;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #239090;
+	border-width: 1px 1px 3px;
+	margin-bottom: 0.65em;
+}
+
+.visa_payment,
+.mastercard_payment,
+.ae_payment {
+	display: inline-block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+@media screen and (min-width: 480px) {
+
+	form,
+	.title {
+		max-width: 480px;
+	}
+
+}
+
+@media screen and (min-width: 760px) {
+
+	form,
+	.title {
+		max-width: 650px;
+	}
+
+	.contact-div label {
+		padding-top: 0.5em;
+		display: inline-block;
+		float: left;
+	}
+
+	.contact-div input,
+	.contact-div select {
+		width: 60%;
+		float: right;
+		display: inline-block;
+	}
+
+	.contact-div {
+		margin-bottom: 50px;
+	}
+
+	input[id="postal_code"] {
+		width: 30%;
+	}
+}

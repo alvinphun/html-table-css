@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	<title>The Code Review</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<header class="main-header">
+		<h1 class="top-header"><a href="#">The Code Review</a></h1>
+	</header>
+
+	<div class="title">
+		<h2>Signup for our newsletter</h2>
+		<p>Get the latest news on how your code is doing right in your inbox</p>
+	</div>
+
+	<form action="index.html" method="post">
+
+		<fieldset class="contact-info">
+		
+			<legend>Contact Information</legend>
+
+			<div class="contact-info-div">
+
+				<div class="contact-div">
+				<label for="name">Full Name:</label>
+				<input type="text" id="name" name="user_name" placeholder="Required" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Required'" required><br>
+				</div>
+
+				<div class="contact-div">
+				<label for="email">Email Address:</label>
+				<input type="email" id="email" name="user_email" placeholder="Required" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Required'" required><br>
+				</div>
+
+				<div class="contact-div">
+				<label for="tel_number">Phone Number:</label>
+				<input type="tel" id="tel_number" name="user_tel_number" required><br>
+				</div>
+
+				<div class="contact-div">
+				<label for="address">Street Address:</label>
+				<input type="text" id="address" name="user_address" required><br>
+				</div>
+
+				<div class="contact-div">
+				<label for="city">City:</label>
+				<input type="text" id="city" name="user_address_city" required><br>
+				</div>
+
+				
+				<div class="contact-div">
+				<label for="province">Province:</label>
+				<select id="province" name="user_province" required>
+						<option value="" disabled hidden selected>Select Province</option>
+						<option value="alberta">Alberta</option>
+						<option value="bc">British Columbia</option>
+						<option value="manitoba">Manitoba</option>
+						<option value="nb">New Brunswick</option>
+						<option value="nfl">NewFoundland</option>
+						<option value="ns">Nova Scotia</option>
+						<option value="ontario">Ontario</option>
+						<option value="pei">Prince Edward Island</option>
+						<option value="sask">Saskatchewan</option>
+						<option value="qc">Quebec</option>
+				</select><br>
+				</div>
+
+				<div class="contact-div">
+				<label for="postal_code">Postal Code:</label>
+				<input type="text" id="postal_code" name="user_postal_code" required>
+				</div>
+
+			</div>
+
+		</fieldset>
+
+		<fieldset class="payment">
+		
+			<legend>Payment Method</legend>
+
+			<label>Card Type:</label>
+			<input type="radio" id="visa_card" value="visa_card" name="user_payment" required>
+			<label for="visa_card" class="visa_payment"><img src="img/visa-icon.png" alt="visa logo"></label>
+
+			<input type="radio" id="mastercard_card" value="mastercard_card" name="user_payment" required>
+			<label for="mastercard_card" class="mastercard_payment"><img src="img/mastercard-icon.png" alt="mastercard logo"></label>
+
+			<input type="radio" id="ae_card" value="ae_card" name="user_payment" required>
+			<label for="ae_card" class="ae_payment"><img src="img/ae-icon.png" alt="american express logo"></label>
+
+			<label for="card_number">Credit Card #:</label>
+			<input type="number" id="card_number" name="user_card" required>
+
+			<label for="card_name">Cardholder Name:</label>
+			<input type="text" id="card_name" name="user_cardname" required>
+
+			<label for="expiration_month">Expiration:</label>
+			<select id="expiration_month" name="expiration_month" required>
+					<option value="" disabled hidden selected >Month</option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+			</select>
+
+			<label for="expiration_year" hidden>Expiration Year</label>
+			<select id="expiration_year" name="expiration_year" required>
+					<option value="" disabled hidden selected >Year</option>
+					<option value="16">2016</option>
+					<option value="17">2017</option>
+					<option value="18">2018</option>
+					<option value="19">2019</option>
+					<option value="20">2020</option>
+					<option value="21">2021</option>
+					<option value="22">2022</option>
+					<option value="23">2023</option>
+					<option value="24">2024</option>
+					<option value="25">2025</option>
+					<option value="26">2026</option>
+					<option value="27">2027</option>
+			</select>
+
+
+		</fieldset>
+
+		<fieldset class="newsletter">
+			
+			<legend>Newsletter</legend>
+
+			<label>Select the newsletters you would like to receive:</label>
+			<input type="checkbox" id="html_news" value="newsletter_html" name="newsletter_type"><label class="light" for="html_news">Node.js News</label><br>
+			<input type="checkbox" id="css_news" value="newsletter_css" name="newsletter_type"><label class="light" for="css_news">AngularJS News</label><br>
+			<input type="checkbox" id="js_news" value="newsletter_js" name="newsletter_type"><label class="light" for="js_news">ReactJS News</label>
+
+			<label class="format_legend">Newsletter Format:</label>
+			<input type="radio" id="format_html" value="format_html" name="newsletter_format"><label class="light" for="format_html">HTML</label><br>
+			<input type="radio" id="format_plain" value="format_plain" name="newsletter_format"><label class="light" for="format_plain">Plain Text</label>
+
+			<label for="other" class="topics_label">Other topics you'd like to hear about</label>
+			<textarea id="other" name="other_text"></textarea>
+
+		</fieldset>
+
+		<button type="submit">Sign Up</button>
+
+	</form>
+
+	<footer class="copyright">
+		<p>Copyright The Code Review 2016</p>
+	</footer>
+
+</body>
+</html>
